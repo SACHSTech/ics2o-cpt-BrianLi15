@@ -1,5 +1,6 @@
 import time
 import datetime
+from threading import Thread
 
 
 # This function asks the user for thier information
@@ -23,7 +24,7 @@ def getinformation():
 
 # This sets the timer, it will start when the user finishes the previous function
 def timer(t):
-   while t = True:
+    while t > 0:
         mins, secs = divmod(t, 60)
         countdown = '{:02d}:{:02d}'.format(mins, secs)
         print(countdown, end="\r")
@@ -32,9 +33,11 @@ def timer(t):
     print("Exam is over")
 
 
-timer(int(1200))
-
 def questions():
-    number = int(input(""))
-    string = input("")
+    number = int(input("Write a number: "))
+    string = input("Write a string: ")
 
+
+if __name__ == '__main__':
+      Thread(target=timer(int(20))).start()
+      Thread(target=questions()).start()

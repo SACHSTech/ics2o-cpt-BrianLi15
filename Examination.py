@@ -1,8 +1,10 @@
-# I will be importing all functions I will need to use for the examination
 import FunctionsClassUsed
 import datetime
 import time
-
+from threading import Thread
+timer = 1200
+count = 0
+# I will be importing all functions I will need to use for the examination
 
 print("Welcome to the ICS2O1a Examination!")
 print("---------------------------------------------------------------------------------------------------------------"
@@ -19,4 +21,6 @@ print("-------------------------------------------------------------------------
       "-----")
 
 FunctionsClassUsed.getinformation()
-FunctionsClassUsed.timer(int(1200))
+if __name__ == '__main__':
+      Thread(target=FunctionsClassUsed.timer(int(20))).start()
+      Thread(target=FunctionsClassUsed.questions()).start()
