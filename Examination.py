@@ -2,8 +2,8 @@ import FunctionsClassUsed
 import datetime
 import time
 from threading import Thread
+
 timer = 1200
-count = 0
 # I will be importing all functions I will need to use for the examination
 
 print("Welcome to the ICS2O1a Examination!")
@@ -20,7 +20,19 @@ print(" This examination will cover every single subject learned in this quadmes
 print("---------------------------------------------------------------------------------------------------------------"
       "-----")
 
-FunctionsClassUsed.getinformation()
-if __name__ == '__main__':
-      Thread(target=FunctionsClassUsed.timer(int(20))).start()
-      Thread(target=FunctionsClassUsed.questions()).start()
+name = str(input("Write your name: "))
+while True:
+    try:
+        grade = int(input("Write your current grade: "))
+        break
+    except ValueError:
+        print("Please input a number (No decimal or letters)")
+
+teacher = str(input("Write your teacher's name: "))
+
+current_date = datetime.datetime.now().strftime("%Y/%m/%d %I:%M:%S %p")
+print("The current date and time is: " + str(current_date))
+start_exam = input("Press enter to start the exam: ")
+FunctionsClassUsed.questions()
+print("\nExam Certificate: \nName: " + name + "\nTeacher: " + teacher + "\nGrade: " + str(grade))
+
