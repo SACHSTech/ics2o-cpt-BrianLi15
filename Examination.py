@@ -1,7 +1,7 @@
 import FunctionsClassUsed
 import datetime
-import time
-from threading import Thread
+import time # I'm still researching how to use a timer
+from threading import Thread # I'm still researching how to use threading
 
 timer = 1200
 # I will be importing all functions I will need to use for the examination

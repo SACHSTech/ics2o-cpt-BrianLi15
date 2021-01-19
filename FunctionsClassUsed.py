@@ -150,8 +150,6 @@ def questions():
             print("Please enter a correct option (A, B, or C)")
 
     while True:
-        print(
-            "\n[Multiple Choice Questions, write the existing LETTER corresponding to the answer (Ex: A, B, C, etc.)]")
         print("This is a program that replicates itself and destroys data and files on the computer")
         print("17.\tBased on the description, what type of computer virus is this?:\nA. Rootkit\tB. Worm\t C. Rogue "
               "Security Software")
@@ -166,8 +164,6 @@ def questions():
             print("Please enter a correct option (A, B, or C)")
 
     while True:
-        print(
-            "\n[Multiple Choice Questions, write the existing LETTER corresponding to the answer (Ex: A, B, C, etc.)]")
         print("This malware records what you type on your pc, tracking your login-name, password and any forms of "
               "sensitive information.")
         print("18.\tBased on the description, what type of computer virus is this?:\nA. Ransomware\tB. Keylogger\t"
@@ -182,6 +178,53 @@ def questions():
         elif question_eighteen.strip().lower() != "a" or question_eighteen.strip().lower() != "c":
             print("Please enter a correct option (A, B, or C)")
 
-    print("\nYour exam score was " + str(count) + "/" + str(18))
+    while True:
+        print("Jim is buying computer parts and he wants to know what he might needs, here is the list of items he "
+              "has below:")
+        print("1.\tCPU")
+        print("2.\tMemory")
+        print("3.\tGPU)")
+        print("4.\tHard Drive")
+        print("5.\tPower Supply/Battery")
+        print("\n19.\tBased on the list above, does he have all the components needed to build a computer?:\nA. "
+              "Yes\tB. No")
+        question_nineteen = input()
+        if question_nineteen.strip().lower() == "b":
+            count += 1
+            break
+        elif question_nineteen.strip().lower() == "a":
+            correct_answer += "19.\tYour Answer: " + question_nineteen + "\t[Correct Answer: B]\n"
+            break
+        elif question_nineteen.strip().lower() != "a" or question_nineteen.strip().lower() != "b":
+            print("Please enter a correct option (A or B)")
+
+    print("\nPython Basics\n-------------")
+    print("[Knowledge Questions]\n")
+
+    question_twenty = input("20.\tWhat do you write to convert a user input into a \"decimal only\" variable? (Ex: "
+                            "int, etc.): \n")
+    if question_twenty.strip().lower() == "float":
+        count += 1
+    else:
+        correct_answer += "20.\tYour Answer: " + question_twenty + "\t[Correct Answer: float]\n"
+
+    print("name = not True")
+    print("for x in range(3):")
+    print("\tname = True")
+    question_twentyone = input("21.\tBased on the program above, what boolean value is the variable, \"name\"?: \n")
+    if question_twentyone.strip().lower() == "true":
+        count += 1
+    else:
+        correct_answer += "21.\tYour Answer: " + question_twentyone + "\t[Correct Answer: True]\n"
+
+    print("s = \"I love Python programming\"")
+    print("print(s[2:5] + s[22:]")
+    question_twentytwo = input("22.\t Based on the program above, what is the output?")
+    if question_twentytwo.strip() == "loving":
+        count += 1
+    else:
+        correct_answer += "22.\tYour Answer: " + question_twentytwo + "\t[Correct Answer: loving]\n"
+        
+    print("\nYour exam score was " + str(count) + "/" + str(20))
     print(correct_answer)
     print("Finished exam time: " + str(datetime.datetime.now().strftime("%Y/%m/%d %I:%M:%S %p")))
