@@ -67,7 +67,7 @@ def questions():
         elif question_seven.strip().lower() == "a" or question_seven.strip().lower() == "b":
             correct_answer += "7.\tYour Answer: " + question_seven + " \t[Correct Answer: C]\n"
             break
-        elif question_seven.strip().lower() != "a" or question_seven.strip().lower() != "b":
+        else:
             print("Please enter a correct option (A, B, or C)")
 
     while True:
@@ -79,7 +79,7 @@ def questions():
         elif question_eight.strip().lower() == "b" or question_eight.strip().lower() == "c":
             correct_answer += "8.\tYour Answer: " + question_eight + "\t[Correct Answer: A]\n"
             break
-        elif question_eight.strip().lower() != "b" or question_eight.strip().lower() != "c":
+        else:
             print("Please enter a correct option (A, B, or C)")
 
     print("\nComputer Components and Malware\n-------------------------------")
@@ -146,7 +146,7 @@ def questions():
         elif question_sixteen.strip().lower() == "b" or question_sixteen.strip().lower() == "c":
             correct_answer += "16.\tYour Answer: " + question_sixteen + "\t[Correct Answer: A]\n"
             break
-        elif question_sixteen.strip().lower() != "a" or question_sixteen.strip().lower() != "b":
+        else:
             print("Please enter a correct option (A, B, or C)")
 
     while True:
@@ -160,7 +160,7 @@ def questions():
         elif question_seventeen.strip().lower() == "a" or question_seventeen.strip().lower() == "c":
             correct_answer += "17.\tYour Answer: " + question_seventeen + "\t[Correct Answer: B]\n"
             break
-        elif question_seventeen.strip().lower() != "a" or question_seventeen.strip().lower() != "c":
+        else:
             print("Please enter a correct option (A, B, or C)")
 
     while True:
@@ -175,7 +175,7 @@ def questions():
         elif question_eighteen.strip().lower() == "a" or question_eighteen.strip().lower() == "c":
             correct_answer += "18.\tYour Answer: " + question_seventeen + "\t[Correct Answer: B]\n"
             break
-        elif question_eighteen.strip().lower() != "a" or question_eighteen.strip().lower() != "c":
+        else:
             print("Please enter a correct option (A, B, or C)")
 
     while True:
@@ -195,7 +195,7 @@ def questions():
         elif question_nineteen.strip().lower() == "a":
             correct_answer += "19.\tYour Answer: " + question_nineteen + "\t[Correct Answer: B]\n"
             break
-        elif question_nineteen.strip().lower() != "a" or question_nineteen.strip().lower() != "b":
+        else:
             print("Please enter a correct option (A or B)")
 
     print("\nPython Basics\n-------------")
@@ -219,12 +219,101 @@ def questions():
 
     print("s = \"I love Python programming\"")
     print("print(s[2:5] + s[22:]")
-    question_twentytwo = input("22.\t Based on the program above, what is the output?")
+    question_twentytwo = input("22.\tBased on the program above, what is the output?: \n")
     if question_twentytwo.strip() == "loving":
         count += 1
     else:
         correct_answer += "22.\tYour Answer: " + question_twentytwo + "\t[Correct Answer: loving]\n"
-        
-    print("\nYour exam score was " + str(count) + "/" + str(20))
+
+    print("print(9 * 5 // 9 + 3 * 2)")
+    while True:
+        try:
+            question_twentythree = int(input("23.\tWhat is the output of the program above? (Input your answer in the "
+                                             "form of a number): \n"))
+            break
+
+        except ValueError:
+            print("Please input your answer in the form of a number")
+
+    if question_twentythree == 11:
+        count += 1
+    else:
+        correct_answer += "23.\tYour Answer: " + str(question_twentythree) + "\t[Correct Answer: 11]\n"
+
+    question_twentyfour = input("24.\tWhat needs to be added infront of a integer value/variable to print it?: \n")
+    if question_twentyfour.strip().lower() == "str" or question_twentyfour.strip().lower() == "str()":
+        count += 1
+    else:
+        correct_answer += "24.\tYour Answer: " + question_twentyfour + "\t[Correct Answer: str or str()]\n"
+
+    print("\n[Fill in the blanks]\n")
+    print("Add a variable that will make the following statement correct:")
+    question_twentyfive = input("25.\t2 __ 3 = 8: \n")
+    if question_twentyfive.strip().lower() == "**":
+        count += 1
+    else:
+        correct_answer += "25.\tYour Answer: " + question_twentyfive + "\t[Correct Answer: **]\n"
+
+    print("Add a variable that will make the following statement correct:")
+    question_twentysix = input("26.\t2 _ 3 = 2: \n")
+    if question_twentysix.strip().lower() == "%":
+        count += 1
+    else:
+        correct_answer += "26.\tYour Answer: " + question_twentysix + "\t[Correct Answer: %]\n"
+
+    print("Add a sign to allow the statement to run:")
+    question_twentyseven = input("27.\tFor i in range(3)_\n\tprint(i) \n")
+    if question_twentyseven.strip().lower() == ":":
+        count += 1
+    else:
+        correct_answer += "27.\tYour Answer: " + question_twentyseven + "\t[Correct Answer: \":\"]\n"
+
+    while True:
+        print(
+            "\n[Multiple Choice Questions, write the existing LETTER corresponding to the answer (Ex: A, B, C, etc.)]\n")
+        print("What is the difference between // and %?:")
+        print("28.\tA. There is no difference\n\tB. % will return the remainder after dividing two values while // "
+              "does integer division (ignoring remainder)\n\tC. % will find the GCF of two variable while // will find "
+              "the LCM")
+        question_twentyeight = input()
+        if question_twentyeight.strip().lower() == "b":
+            count += 1
+            break
+        elif question_twentyeight.strip().lower() == "a" or question_twentyeight.strip().lower() == "c":
+            correct_answer += "28.\tYour Answer: " + question_twentyeight + "\t[Correct Answer: B]\n"
+            break
+        else:
+            print("Please enter a correct option (A, B, or C)")
+
+    while True:
+        print("What is wrong with the following program?:")
+        print("Two number = int(input())")
+        print("Text = input()")
+        print("print(str(two number) * text)")
+        print("29.\tA. There is nothing wrong\tB. Line 1\tC. Line 3")
+        question_twentynine = input()
+        if question_twentynine.strip().lower() == "b":
+            count += 1
+            break
+        elif question_twentynine.strip().lower() == "a" or question_twentynine.strip().lower() == "c":
+            correct_answer += "29.\tYour Answer: " + question_twentynine + "\t[Correct Answer: B]\n"
+            break
+        else:
+            print("Please enter a correct option (A, B, or C)")
+
+    while True:
+        print("What's the difference between (i += 1) and (i = i + 1)")
+        print("30.\tA. There is no difference\tB. += makes i the sum of i + i + 1\t C. += multiplies i with itself by one")
+        question_thirty = input()
+        if question_thirty.strip().lower() == "a":
+            count += 1
+            break
+        elif question_thirty.strip().lower() == "b" or question_thirty.strip().lower() == "c":
+            correct_answer += "30.\tYour Answer: " + question_thirty + "\t[Correct Answer: A]\n"
+            break
+        else:
+            print("Please enter a correct option (A, B, or C)")
+
+    print("\nYour exam score was " + str(count) + "/" + str(30))
     print(correct_answer)
     print("Finished exam time: " + str(datetime.datetime.now().strftime("%Y/%m/%d %I:%M:%S %p")))
