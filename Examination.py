@@ -16,7 +16,7 @@ print(" This examination will cover every single subject learned in this quadmes
       "examination. Some questions will be worth more points than others. At the end of the examination,\n "
       "the questions you got wrong will be displayed and the correct answer will be shown with it. There is going to\n "
       "be a timer on this test, you will have 20 minutes to finish this test, if you do not finish the exam in time,\n "
-      "the exam will automatically close and the remianing questions unanswered will counted as zero. ")
+      "the exam will automatically close and the remaining questions unanswered will counted as zero. ")
 print("---------------------------------------------------------------------------------------------------------------"
       "-----")
 
@@ -33,6 +33,12 @@ teacher = str(input("Write your teacher's name: "))
 current_date = datetime.datetime.now().strftime("%Y/%m/%d %I:%M:%S %p")
 print("The current date and time is: " + str(current_date))
 start_exam = input("Press enter to start the exam: ")
+
+current_time = time.time()
 FunctionsClassUsed.questions()
+elapsed_time = (time.time() - current_time)
+
+FunctionsClassUsed.timeconverter(int(elapsed_time))
+
 print("\nExam Certificate: \nName: " + name + "\nTeacher: " + teacher + "\nGrade: " + str(grade))
 

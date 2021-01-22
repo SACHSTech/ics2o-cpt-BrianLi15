@@ -1,5 +1,13 @@
 import datetime
 
+def timeconverter(seconds):
+    seconds = seconds % (24 * 3600)
+    seconds %= 3600
+    minutes = seconds // 60
+    seconds %= 60
+
+    print("Time taken on exam: %02dm:%02ds" % (minutes, seconds))
+
 
 def questions():
     count = 0
@@ -105,8 +113,9 @@ def questions():
 
     while True:
         try:
-            question_twelve = int(input("12.\tFor a 3 GHz dual core processor, what is the clock speed of a single core? ("
-                                        "Input your answer in the form of a number): \n"))
+            question_twelve = int(
+                input("12.\tFor a 3 GHz dual core processor, what is the clock speed of a single core? ("
+                      "Input your answer in the form of a number): \n"))
             break
         except ValueError:
             print("Input your answer in the form of a number")
@@ -122,7 +131,8 @@ def questions():
     else:
         correct_answer += "13.\tYour Answer: " + question_thirteen + "\t[Correct Answer: processor]\n"
 
-    question_fourteen = input("14.\tThe information processing cycle is as follows: Input, Processing, ______, Storage: \n")
+    question_fourteen = input(
+        "14.\tThe information processing cycle is as follows: Input, Processing, ______, Storage: \n")
     if question_fourteen.strip().lower() == "output":
         count += 1
     else:
@@ -138,7 +148,8 @@ def questions():
         print(
             "\n[Multiple Choice Questions, write the existing LETTER corresponding to the answer (Ex: A, B, C, etc.)]\n")
         print("This type of software or malware is installed on a computing device without the user's knowledge")
-        print("16.\tBased on the description, what type of computer virus is this?:\nA. Spyware\t B. Trojan\t C. Adware")
+        print(
+            "16.\tBased on the description, what type of computer virus is this?:\nA. Spyware\t B. Trojan\t C. Adware")
         question_sixteen = input()
         if question_sixteen.strip().lower() == "a":
             count += 1
@@ -303,7 +314,8 @@ def questions():
 
     while True:
         print("What's the difference between (i += 1) and (i = i + 1)")
-        print("30.\tA. There is no difference\tB. += makes i the sum of i + i + 1\t C. += multiplies i with itself by one")
+        print(
+            "30.\tA. There is no difference\tB. += makes i the sum of i + i + 1\t C. += multiplies i with itself by one")
         question_thirty = input()
         if question_thirty.strip().lower() == "a":
             count += 1
@@ -332,12 +344,12 @@ def questions():
         print("What's the output of this program?:")
         print("for x in 100:")
         print("\tprint(\"hot dogs\")")
-        print("32.\tA. The output would be nothing\tB. An error will pop up\tC. It wil print hot dogs 100 times")
+        print("32.\tA. The output would be nothing\tB. An error will pop up\t C. It wil print hot dogs 100 times")
         question_thirtytwo = input()
-        if question_thirtyone.strip().lower() == "b":
+        if question_thirtytwo.strip().lower() == "b":
             count += 1
             break
-        elif question_thirtyone.strip().lower() == "a" or question_thirtyone.strip().lower() == "c":
+        elif question_thirtytwo.strip().lower() == "a" or question_thirtytwo.strip().lower() == "c":
             correct_answer += "32.\tYour Answer: " + question_thirtytwo + "\t[Correct Answer: B]\n"
             break
         else:
