@@ -314,6 +314,43 @@ def questions():
         else:
             print("Please enter a correct option (A, B, or C)")
 
-    print("\nYour exam score was " + str(count) + "/" + str(30))
-    print(correct_answer)
+    while True:
+        print("What's the output of this program?:")
+        print("boolean_value = True\nif not boolean_value:\n\tprint(10)")
+        print("31.\tA. The output would be nothing\tB. An error will pop up\t C. 10")
+        question_thirtyone = input()
+        if question_thirtyone.strip().lower() == "a":
+            count += 1
+            break
+        elif question_thirtyone.strip().lower() == "b" or question_thirtyone.strip().lower() == "c":
+            correct_answer += "31.\tYour Answer: " + question_thirtyone + "\t[Correct Answer: A]\n"
+            break
+        else:
+            print("Please enter a correct option (A, B, or C)")
+
+    while True:
+        print("What's the output of this program?:")
+        print("for x in 100:")
+        print("\tprint(\"hot dogs\")")
+        print("32.\tA. The output would be nothing\tB. An error will pop up\tC. It wil print hot dogs 100 times")
+        question_thirtytwo = input()
+        if question_thirtyone.strip().lower() == "b":
+            count += 1
+            break
+        elif question_thirtyone.strip().lower() == "a" or question_thirtyone.strip().lower() == "c":
+            correct_answer += "32.\tYour Answer: " + question_thirtytwo + "\t[Correct Answer: B]\n"
+            break
+        else:
+            print("Please enter a correct option (A, B, or C)")
+
+    print("\n[Bonus Questions!]")
+    question_thirtythree = input("33.\tWhat is the method signature for a class constructor?: \n")
+    if question_thirtythree.strip().lower() == "def __init__(self)":
+        count += 1
+    else:
+        correct_answer += "33.\tYour Answer: " + question_thirtythree + "\t[Correct Answer: def __init__(self)]\n"
+
+    print("\nYou have finished the examination, well done!")
+    print("\nYour exam score was " + str(count) + "/" + str(32))
+    print("\n" + correct_answer)
     print("Finished exam time: " + str(datetime.datetime.now().strftime("%Y/%m/%d %I:%M:%S %p")))
