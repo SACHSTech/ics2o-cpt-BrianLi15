@@ -129,7 +129,7 @@ def questions():
     if question_thirteen.strip().lower() == "processors" or question_thirteen.strip().lower() == "processor":
         count += 1
     else:
-        correct_answer += "13.\tYour Answer: " + question_thirteen + "\t[Correct Answer: processor]\n"
+        correct_answer += "13.\tYour Answer: " + question_thirteen + "\t[Correct Answer: processor or processors]\n"
 
     question_fourteen = input(
         "14.\tThe information processing cycle is as follows: Input, Processing, ______, Storage: \n")
@@ -214,10 +214,10 @@ def questions():
 
     question_twenty = input("20.\tWhat do you write to convert a user input into a \"decimal only\" variable? (Ex: "
                             "int, etc.): \n")
-    if question_twenty.strip().lower() == "float":
+    if question_twenty.strip().lower() == "float" or question_twenty.strip().lower() == "float()":
         count += 1
     else:
-        correct_answer += "20.\tYour Answer: " + question_twenty + "\t[Correct Answer: float]\n"
+        correct_answer += "20.\tYour Answer: " + question_twenty + "\t[Correct Answer: float or float()]\n"
 
     print("name = not True")
     print("for x in range(3):")
