@@ -1,5 +1,6 @@
 import datetime
 
+
 def timeconverter(seconds):
     seconds = seconds % (24 * 3600)
     seconds %= 3600
@@ -23,7 +24,7 @@ def questions():
 
     while True:
         try:
-            question_two = int(input("2.\tHow many gigabytes are in a terabyte? (Input your answer in the form of a "
+            question_two = int(input("\n2.\tHow many gigabytes are in a terabyte? (Input your answer in the form of a "
                                      "number): \n"))
             break
         except ValueError:
@@ -35,7 +36,7 @@ def questions():
 
     while True:
         try:
-            question_three = int(input("How many bytes does 16 bits equal? (Input your answer in the form of a "
+            question_three = int(input("\n3.\tHow many bytes does 16 bits equal? (Input your answer in the form of a "
                                        "number): \n"))
             break
         except ValueError:
@@ -45,7 +46,7 @@ def questions():
     else:
         correct_answer += "3.\tYour Answer: " + str(question_three) + "\t[Correct Answer: 2]\n"
 
-    question_four = input("4.\tWhat does Megahertz(MHz) & Gigahertz (GHz) measure?: \n")
+    question_four = input("\n4.\tWhat does Megahertz(MHz) & Gigahertz (GHz) measure?: \n")
     if question_four.strip().lower() == "processing speed":
         count += 1
     else:
@@ -58,15 +59,14 @@ def questions():
     else:
         correct_answer += "5.\tYour Answer: " + question_five + "\t[Correct Answer: transferred]\n"
 
-    question_six = input("6.\tDPI measures how many points of information can be captured in a ___: \n")
+    question_six = input("\n6.\tDPI measures how many points of information can be captured in a ___: \n")
     if question_six.strip().lower() == "inch":
         count += 1
     else:
         correct_answer += "6.\tYour Answer: " + question_six + "\t[Correct Answer: inch]\n"
 
+    print("\n[Multiple Choice Questions, write the existing LETTER corresponding to the answer (Ex: A, B, C, etc.)]\n")
     while True:
-        print(
-            "\n[Multiple Choice Questions, write the existing LETTER corresponding to the answer (Ex: A, B, C, etc.)]\n")
         print("7.\tDPI is NOT used for:\nA. Mouse\tB. Printer\t C. Cameras")
         question_seven = input()
         if question_seven.strip().lower() == "c":
@@ -79,7 +79,7 @@ def questions():
             print("Please enter a correct option (A, B, or C)")
 
     while True:
-        print("8.\tPPI is used for:\nA. Smartphone Screens  \tB. TV Screen\tC. Keyboard")
+        print("\n8.\tPPI is used for:\nA. Smartphone Screens  \tB. TV Screen\tC. Keyboard")
         question_eight = input()
         if question_eight.strip().lower() == "a":
             count += 1
@@ -99,13 +99,13 @@ def questions():
     else:
         correct_answer += "9.\tYour Answer: " + question_nine + "\t[Correct Answer: motherboard]\n"
 
-    question_ten = input("10.\tWhat does \"CPU\" stand for?: \n")
+    question_ten = input("\n10.\tWhat does \"CPU\" stand for?: \n")
     if question_ten.strip().lower() == "central processing unit":
         count += 1
     else:
         correct_answer += "10.\tYour Answer: " + question_ten + "\t[Correct Answer: central processing unit]\n"
 
-    question_eleven = input("11.\tWhat type of memory is the slowest in the memory hierarchy?: \n")
+    question_eleven = input("\n11.\tWhat type of memory is the slowest in the memory hierarchy?: \n")
     if question_eleven.strip().lower() == "storage":
         count += 1
     else:
@@ -114,7 +114,7 @@ def questions():
     while True:
         try:
             question_twelve = int(
-                input("12.\tFor a 3 GHz dual core processor, what is the clock speed of a single core? ("
+                input("\n12.\tFor a 3 GHz dual core processor, what is the clock speed of a single core? ("
                       "Input your answer in the form of a number): \n"))
             break
         except ValueError:
@@ -131,22 +131,21 @@ def questions():
     else:
         correct_answer += "13.\tYour Answer: " + question_thirteen + "\t[Correct Answer: processor or processors]\n"
 
-    question_fourteen = input(
-        "14.\tThe information processing cycle is as follows: Input, Processing, ______, Storage: \n")
+    question_fourteen = input("\n14.\tThe information processing cycle is as follows: Input, Processing, ______, "
+                              "Storage: \n")
     if question_fourteen.strip().lower() == "output":
         count += 1
     else:
         correct_answer += "14.\tYour Answer: " + question_fourteen + "\t[Correct Answer: output]\n"
 
-    question_fifteen = input("15.\tThe processing chip, ___, serves as the brains of the computer: \n")
+    question_fifteen = input("\n15.\tThe processing chip, ___, serves as the brains of the computer: \n")
     if question_fifteen.strip().lower() == "cpu":
         count += 1
     else:
         correct_answer += "15.\tYour Answer: " + question_fifteen + "\t[Correct Answer: CPU]\n"
 
+    print("\n[Multiple Choice Questions, write the existing LETTER corresponding to the answer (Ex: A, B, C, etc.)]\n")
     while True:
-        print(
-            "\n[Multiple Choice Questions, write the existing LETTER corresponding to the answer (Ex: A, B, C, etc.)]\n")
         print("This type of software or malware is installed on a computing device without the user's knowledge")
         print(
             "16.\tBased on the description, what type of computer virus is this?:\nA. Spyware\t B. Trojan\t C. Adware")
@@ -161,7 +160,7 @@ def questions():
             print("Please enter a correct option (A, B, or C)")
 
     while True:
-        print("This is a program that replicates itself and destroys data and files on the computer")
+        print("\nThis is a program that replicates itself and destroys data and files on the computer")
         print("17.\tBased on the description, what type of computer virus is this?:\nA. Rootkit\tB. Worm\t C. Rogue "
               "Security Software")
         question_seventeen = input()
@@ -175,7 +174,7 @@ def questions():
             print("Please enter a correct option (A, B, or C)")
 
     while True:
-        print("This malware records what you type on your pc, tracking your login-name, password and any forms of "
+        print("\nThis malware records what you type on your pc, tracking your login-name, password and any forms of "
               "sensitive information.")
         print("18.\tBased on the description, what type of computer virus is this?:\nA. Ransomware\tB. Keylogger\t"
               "C. Browser Hijacker")
@@ -190,7 +189,7 @@ def questions():
             print("Please enter a correct option (A, B, or C)")
 
     while True:
-        print("Jim is buying computer parts and he wants to know what he might needs, here is the list of items he "
+        print("\nJim is buying computer parts and he wants to know what he might needs, here is the list of items he "
               "has below:")
         print("1.\tCPU")
         print("2.\tMemory")
@@ -219,7 +218,7 @@ def questions():
     else:
         correct_answer += "20.\tYour Answer: " + question_twenty + "\t[Correct Answer: float or float()]\n"
 
-    print("name = not True")
+    print("\nname = not True")
     print("for x in range(3):")
     print("\tname = True")
     question_twentyone = input("21.\tBased on the program above, what boolean value is the variable, \"name\"?: \n")
@@ -228,7 +227,7 @@ def questions():
     else:
         correct_answer += "21.\tYour Answer: " + question_twentyone + "\t[Correct Answer: True]\n"
 
-    print("s = \"I love Python programming\"")
+    print("\ns = \"I love Python programming\"")
     print("print(s[2:5] + s[22:]")
     question_twentytwo = input("22.\tBased on the program above, what is the output?: \n")
     if question_twentytwo.strip() == "loving":
@@ -236,7 +235,7 @@ def questions():
     else:
         correct_answer += "22.\tYour Answer: " + question_twentytwo + "\t[Correct Answer: loving]\n"
 
-    print("print(9 * 5 // 9 + 3 * 2)")
+    print("\nprint(9 * 5 // 9 + 3 * 2)")
     while True:
         try:
             question_twentythree = int(input("23.\tWhat is the output of the program above? (Input your answer in the "
@@ -251,7 +250,7 @@ def questions():
     else:
         correct_answer += "23.\tYour Answer: " + str(question_twentythree) + "\t[Correct Answer: 11]\n"
 
-    question_twentyfour = input("24.\tWhat needs to be added infront of a integer value/variable to print it?: \n")
+    question_twentyfour = input("\n24.\tWhat needs to be added infront of a integer value/variable to print it?: \n")
     if question_twentyfour.strip().lower() == "str" or question_twentyfour.strip().lower() == "str()":
         count += 1
     else:
@@ -265,23 +264,22 @@ def questions():
     else:
         correct_answer += "25.\tYour Answer: " + question_twentyfive + "\t[Correct Answer: **]\n"
 
-    print("Add a variable that will make the following statement correct:")
+    print("\nAdd a variable that will make the following statement correct:")
     question_twentysix = input("26.\t2 _ 3 = 2: \n")
     if question_twentysix.strip().lower() == "%":
         count += 1
     else:
         correct_answer += "26.\tYour Answer: " + question_twentysix + "\t[Correct Answer: %]\n"
 
-    print("Add a sign to allow the statement to run:")
+    print("\nAdd a sign to allow the statement to run:")
     question_twentyseven = input("27.\tFor i in range(3)_\n\tprint(i) \n")
     if question_twentyseven.strip().lower() == ":":
         count += 1
     else:
         correct_answer += "27.\tYour Answer: " + question_twentyseven + "\t[Correct Answer: \":\"]\n"
 
+    print("\n[Multiple Choice Questions, write the existing LETTER corresponding to the answer (Ex: A, B, C, etc.)]\n")
     while True:
-        print(
-            "\n[Multiple Choice Questions, write the existing LETTER corresponding to the answer (Ex: A, B, C, etc.)]\n")
         print("What is the difference between // and %?:")
         print("28.\tA. There is no difference\n\tB. % will return the remainder after dividing two values while // "
               "does integer division (ignoring remainder)\n\tC. % will find the GCF of two variable while // will find "
@@ -297,7 +295,7 @@ def questions():
             print("Please enter a correct option (A, B, or C)")
 
     while True:
-        print("What is wrong with the following program?:")
+        print("\nWhat is wrong with the following program?:")
         print("Two number = int(input())")
         print("Text = input()")
         print("print(str(two number) * text)")
@@ -313,7 +311,7 @@ def questions():
             print("Please enter a correct option (A, B, or C)")
 
     while True:
-        print("What's the difference between (i += 1) and (i = i + 1)")
+        print("\nWhat's the difference between (i += 1) and (i = i + 1)")
         print(
             "30.\tA. There is no difference\tB. += makes i the sum of i + i + 1\t C. += multiplies i with itself by one")
         question_thirty = input()
@@ -327,7 +325,7 @@ def questions():
             print("Please enter a correct option (A, B, or C)")
 
     while True:
-        print("What's the output of this program?:")
+        print("\nWhat's the output of this program?:")
         print("boolean_value = True\nif not boolean_value:\n\tprint(10)")
         print("31.\tA. The output would be nothing\tB. An error will pop up\t C. 10")
         question_thirtyone = input()
@@ -341,7 +339,7 @@ def questions():
             print("Please enter a correct option (A, B, or C)")
 
     while True:
-        print("What's the output of this program?:")
+        print("\nWhat's the output of this program?:")
         print("for x in 100:")
         print("\tprint(\"hot dogs\")")
         print("32.\tA. The output would be nothing\tB. An error will pop up\t C. It wil print hot dogs 100 times")
@@ -356,13 +354,67 @@ def questions():
             print("Please enter a correct option (A, B, or C)")
 
     print("\n[Bonus Questions!]")
-    question_thirtythree = input("33.\tWhat is the method signature for a class constructor?: \n")
-    if question_thirtythree.strip().lower() == "def __init__(self)":
-        count += 1
-    else:
-        correct_answer += "33.\tYour Answer: " + question_thirtythree + "\t[Correct Answer: def __init__(self)]\n"
+    print("\nFor these harder questions, they are worth one to three points each.")
+    print(
+        "you will have three attempts to do them, it will ask for another input if your answer is wrong. The points you")
+    print("get for answering each question correct will be determined based on your number of attempts for each. ")
+    print("(First attempt = 3 points, second attempt = 2 points and third attempt = 1 points)\n")
+    user_attempt = 0
+    list_attempts = []
+    print_boolean = True
+    while user_attempt != 3:
+        question_thirtythree = input("33.\tWhat is the method signature for a class constructor?: \n")
+        user_attempt += 1
+        if question_thirtythree.strip().lower() == "def __init__(self)" and user_attempt == 1:
+            count += 3
+            print("Correct!")
+            print_boolean = False
+            break
+        elif question_thirtythree.strip().lower() == "def __init__(self)" and user_attempt == 2:
+            count += 2
+            print("Correct!")
+            print_boolean = False
+            break
+        elif question_thirtythree.strip().lower() == "def __init__(self)" and user_attempt == 3:
+            count += 1
+            print("Correct!")
+            print_boolean = False
+            break
+        list_attempts.append(question_thirtythree)
+    if print_boolean:
+        correct_answer += "33.\tYour Answers:\nAttempt One: " + list_attempts[0] + "\nAttempt Two: " + \
+                          list_attempts[1] + "\nAttempt Three: " + list_attempts[
+                              2] + "\n[Correct Answer: def __init__(self)]"
+
+    user_attempt_two = 0
+    list_attempts_two = []
+    print_boolean_two = True
+    while user_attempt_two != 3:
+        print("\ndef catalan(n):\n\tif n <= 1:\n\t\t\n\telse:\n\t\tr = 0\n\t\tfor i in range(n):\n\t\t\tr+= catalan("
+              "i) * catalan(n-i-1)\n\t\treturn r\n\nprint(catalan(3))")
+        question_thirtyfour = input("\n34.\tWhat is the output of the program above?: \n")
+        user_attempt_two += 1
+        if question_thirtyfour.strip().lower() == "5" and user_attempt_two == 1:
+            count += 3
+            print("Correct!")
+            print_boolean_two = False
+            break
+        elif question_thirtyfour.strip().lower() == "5" and user_attempt_two == 2:
+            count += 2
+            print("Correct!")
+            print_boolean_two = False
+            break
+        elif question_thirtyfour.strip().lower() == "5" and user_attempt_two == 3:
+            count += 1
+            print("Correct!")
+            print_boolean_two = False
+            break
+        list_attempts_two.append(question_thirtyfour)
+    if print_boolean_two:
+        correct_answer += "\n34.\tYour Answers:\nAttempt One: " + list_attempts_two[0] + "\nAttempt Two: " + \
+                          list_attempts_two[1] + "\nAttempt Three: " + list_attempts_two[2] + "\n[Correct Answer: 5]"
 
     print("\nYou have finished the examination, well done!")
     print("\nYour exam score was " + str(count) + "/" + str(32))
     print("\n" + correct_answer)
-    print("Finished exam time: " + str(datetime.datetime.now().strftime("%Y/%m/%d %I:%M:%S %p")))
+    print("\nFinished exam time: " + str(datetime.datetime.now().strftime("%Y/%m/%d %I:%M:%S %p")))
