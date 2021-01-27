@@ -1,6 +1,9 @@
 import datetime
 
 
+# This function converts milliseconds (which is the base time used for measuring how long a program takes to run)
+# into minutes and seconds, it also formats the time into a timer. (Ex: %02dm:%02ds) It does this by constantly dividing
+# the milliseconds.
 def timeconverter(seconds):
     seconds = seconds % (24 * 3600)
     seconds %= 3600
@@ -10,6 +13,8 @@ def timeconverter(seconds):
     print("Time taken on exam: %02dm:%02ds" % (minutes, seconds))
 
 
+# This functions asks all the questions, as well as gathers the user's answers. It will also display their final score
+# and the questions they got wrong.
 def questions():
     count = 0
     correct_answer = "Questions You Got Wrong: \n"
@@ -28,7 +33,7 @@ def questions():
                                      "number): \n"))
             break
         except ValueError:
-            print("Please input your answer in the form of a number")
+            print("Please input your answer in the form of a number!")
     if question_two == 1024:
         count += 1
     else:
@@ -40,7 +45,7 @@ def questions():
                                        "number): \n"))
             break
         except ValueError:
-            print("Please input your answer in the form of a number")
+            print("Please input your answer in the form of a number!")
     if question_three == 2:
         count += 1
     else:
@@ -118,7 +123,7 @@ def questions():
                       "Input your answer in the form of a number): \n"))
             break
         except ValueError:
-            print("Input your answer in the form of a number")
+            print("Input your answer in the form of a number!")
     if question_twelve == 3:
         count += 1
     else:
@@ -243,7 +248,7 @@ def questions():
             break
 
         except ValueError:
-            print("Please input your answer in the form of a number")
+            print("Please input your answer in the form of a number!")
 
     if question_twentythree == 11:
         count += 1
