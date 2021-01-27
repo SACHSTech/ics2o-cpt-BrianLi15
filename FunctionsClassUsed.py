@@ -51,7 +51,7 @@ def questions():
     else:
         correct_answer += "3.\tYour Answer: " + str(question_three) + "\t[Correct Answer: 2]\n"
 
-    question_four = input("\n4.\tWhat does Megahertz(MHz) & Gigahertz (GHz) measure?: \n")
+    question_four = input("\n4.\tWhat does Megahertz (MHz) & Gigahertz (GHz) measure?: \n")
     if question_four.strip().lower() == "processing speed":
         count += 1
     else:
